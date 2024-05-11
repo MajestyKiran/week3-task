@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page - Business Information Appliwhere</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Business Information Appliwhere</h1>
+    </header>
+    <div class="container">
+        <section id="categories">
+            <h2>List of Categories</h2>
+            <ul>
+                <li><a href="#">Top Food Businesses</a></li>
+                <li><a href="#">Top Schools</a></li>
+                <li><a href="#">Top Real Estate Agents</a></li>
+            </ul>
+        </section>
+        <section id="admin-forms">
+            <h2>Admin Forms</h2>
+            <form action="add_city_town.php" method="POST">
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" required>
+                <label for="town">Town:</label>
+                <input type="text" id="town" name="town" required>
+                <input type="submit" value="Add City and Town">
+            </form>
+            <form action="add_business_category.php" method="POST">
+                <label for="category">Category:</label>
+                <input type="text" id="category" name="category" required>
+                <input type="submit" value="Add Business Category">
+            </form>
+            <form action="add_business_profile.php" method="POST">
+                <label for="business_name">Business Name:</label>
+                <input type="text" id="business_name" name="business_name" required>
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" required></textarea>
+                <label for="city">City:</label>
+                <select id="city" name="city">
+                    <!-- Options will be populated dynamically from PHP -->
+                </select>
+                <label for="category">Category:</label>
+                <select id="category" name="category">
+                    <option value="Restaurants">Restaurants</option>
+                    <option value="Real Estate">Real Estate</option>
+                    <option value="Schools">Schools</option>
+                    <option value="Clinics">Clinics</option>
+                    <option value="Law Firms">Law Firms</option>
+                </select>
+                <input type="submit" value="Add Business Profile">
+            </form>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 Business Information Appliwhere</p>
+    </footer>
+</body>
+</html>
